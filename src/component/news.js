@@ -43,39 +43,39 @@ export class news extends Component {
       totalResult:parsedata.totalResult
     })
   }
-  nextpages = async () => {
-    console.log("next");
+  // nextpages = async () => {
+  //   console.log("next");
 
-    let url = `https://newsapi.org/v2/top-headlines?category=${this.props.category}&country=us&apiKey=a1d6aabb20f14995b3da0cc890c55452&pagesize=6&page=${this.state.page + 1}`;
-    this.setState({ loading: true });
-    let data = await fetch(url);
-    let parsedata = await data.json();
-    console.log(parsedata);
-    this.setState({
-      article: parsedata.articles,
-      page: this.state.page + 1,
-      loading: false,
-      totalResult:parsedata.totalResult
-    })
+  //   let url = `https://newsapi.org/v2/top-headlines?category=${this.props.category}&country=us&apiKey=a1d6aabb20f14995b3da0cc890c55452&pagesize=6&page=${this.state.page + 1}`;
+  //   this.setState({ loading: true });
+  //   let data = await fetch(url);
+  //   let parsedata = await data.json();
+  //   console.log(parsedata);
+  //   this.setState({
+  //     article: parsedata.articles,
+  //     page: this.state.page + 1,
+  //     loading: false,
+  //     totalResult:parsedata.totalResult
+  //   })
 
-  }
-  prevpages = async () => {
-    console.log("prv");
+  //}
+  // prevpages = async () => {
+  //   console.log("prv");
 
-    let url = `https://newsapi.org/v2/top-headlines?category=${this.props.category}&country=us&apiKey=a1d6aabb20f14995b3da0cc890c55452&pagesize=6&page=${this.state.page - 1}`;
-    this.setState({ loading: true });
-    let data = await fetch(url);
-    let parsedata = await data.json();
-    console.log(parsedata);
-    this.setState({
-      article: parsedata.articles,
-      page: this.state.page - 1,
-      totalresult: parsedata.totalResult,
-      loading: false
+  //   let url = `https://newsapi.org/v2/top-headlines?category=${this.props.category}&country=us&apiKey=a1d6aabb20f14995b3da0cc890c55452&pagesize=6&page=${this.state.page - 1}`;
+  //   this.setState({ loading: true });
+  //   let data = await fetch(url);
+  //   let parsedata = await data.json();
+  //   console.log(parsedata);
+  //   this.setState({
+  //     article: parsedata.articles,
+  //     page: this.state.page - 1,
+  //     totalresult: parsedata.totalResult,
+  //     loading: false
 
-    })
+  //   })
 
-  }
+  //}
 
   async componentDidMount() {
 
